@@ -39,6 +39,8 @@
 #' @import data.table
 #' @importFrom rlang sym
 #'
+#' @export
+#'
 box_mean_plot <- function(d,x=NULL,y,color.group=NULL,x.axis=NULL,y.axis=NULL,legend.title=NULL,
                           x.order=NULL,group.order=NULL,x.first=NULL,group.first=NULL,
                           means=FALSE,boxwidth=0.7,whisker.width=1,mean.size=1,points=TRUE,jitterwidth=1,pointsize=1,

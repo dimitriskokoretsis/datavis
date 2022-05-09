@@ -14,6 +14,8 @@
 #'
 #' @import Cairo
 #'
+#' @export
+#'
 plot_save <- function(plot,filepath,height,width,unit="in",dpi=600) {
 
   if(unit!="in" & unit!="cm" & unit!="mm") {# Test if proper length unit was given

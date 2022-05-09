@@ -42,6 +42,8 @@
 #' @import data.table
 #' @importFrom rlang sym
 #'
+#' @export
+#'
 bar_point_plot <- function(d,x=NULL,y,color.group=NULL,x.axis=NULL,y.axis=NULL,legend.title=NULL,
                            x.order=NULL,group.order=NULL,x.first=NULL,group.first=NULL,
                            points=TRUE,barwidth=0.7,jitterwidth=1,pointsize=1,whisker.width=1,

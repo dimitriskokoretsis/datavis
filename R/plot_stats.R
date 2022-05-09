@@ -21,6 +21,8 @@
 #' @import data.table
 #' @import ggplot2
 #'
+#' @export
+#'
 plot_stats <- function(plot,d,labels,position="identity",size=1,y.adj=0) {
 
   if(!inherits(layer_scales(plot)$x,"ScaleDiscrete")) {
