@@ -99,8 +99,8 @@ plot_stats <- function(plot,d,labels,position="identity",size=1,y.adj=0) {
     x.levels <- levels(plot$data[[x.name]])
     fill.levels <- levels(plot$data[[fill.name]])
     top.y <- CJ(x=x.levels,fill=fill.levels,sorted=FALSE)
-    top.y[,`:=`(x = factor(x,levels=x.levels),
-                fill = factor(fill,levels=fill.levels))]
+    top.y[,c("x","fill"):=.(factor(x,levels=x.levels),
+                            factor(fill,levels=fill.levels))]
     setnames(top.y,c("x","fill"),c(x.name,fill.name))
   }
 
