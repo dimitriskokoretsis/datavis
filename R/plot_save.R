@@ -59,7 +59,7 @@ plot_save <- function(plot,filepath,height,width,unit="in",dpi=600) {
   for(i in 1:length(split.file[[1]])-1) {
     filedirectory<-paste(filedirectory,split.file[[1]][i],sep="/")
   }
-  filedirectory<-substr(filedirectory,2,str_length(filedirectory))
+  filedirectory<-substr(filedirectory,2,stringr::str_length(filedirectory))
   if(filedirectory=="") {
     filedirectory<-"the working directory"
   }

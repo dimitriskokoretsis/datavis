@@ -37,7 +37,6 @@
 #' @import ggplot2
 #' @import ggthemes
 #' @import data.table
-#' @importFrom rlang sym
 #'
 #' @export
 #'
@@ -121,7 +120,7 @@ box_mean_plot <- function(d,x=NULL,y,color.group=NULL,x.axis=NULL,y.axis=NULL,le
   show.outliers <- ifelse(points==TRUE,NA,1)
 
   if(is.null(x)) {
-    mapping <- aes(x="constant",y=!!sym(y),fill=!!sym(color.group))
+    mapping <- aes(x="constant",y=!!rlang::sym(y),fill=!!rlang::sym(color.group))
 
     box.position <- position_dodge(width=boxwidth)
 
@@ -138,7 +137,7 @@ box_mean_plot <- function(d,x=NULL,y,color.group=NULL,x.axis=NULL,y.axis=NULL,le
                        labs(fill=ifelse(is.null(legend.title),color.group,legend.title)))
 
   } else if(is.null(color.group)) {
-    mapping <- aes(x=!!sym(x),y=!!sym(y))
+    mapping <- aes(x=!!rlang::sym(x),y=!!rlang::sym(y))
 
     box.position <- position_identity()
 
@@ -153,7 +152,7 @@ box_mean_plot <- function(d,x=NULL,y,color.group=NULL,x.axis=NULL,y.axis=NULL,le
     aesthetics <- xlab(ifelse(is.null(x.axis),x,x.axis))
 
   } else {
-    mapping <- aes(x=!!sym(x),y=!!sym(y),fill=!!sym(color.group))
+    mapping <- aes(x=!!rlang::sym(x),y=!!rlang::sym(y),fill=!!rlang::sym(color.group))
 
     box.position <- position_dodge(width=boxwidth)
 
