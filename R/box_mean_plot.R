@@ -34,7 +34,7 @@
 #' @param mean.type Character. Sets from arithmetic to geometric mean and SD. Defaults to "arithmetic".
 #' @return A plot based on `ggplot2`.
 #'
-#' #' @import ggplot2
+#' @import ggplot2
 #' @import ggthemes
 #' @import data.table
 #' @importFrom rlang sym

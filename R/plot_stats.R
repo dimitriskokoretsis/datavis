@@ -77,12 +77,12 @@ plot_stats <- function(plot,d,labels,position="identity",size=1,y.adj=0) {
 
 }
 
+#' @import data.table
+#' @import ggplot2
+#'
 .get_top_y <- function(plot,position,x.name,fill.name) {
   # Get plotted data from ggplot_build(plot)$data
   # Get original data from plot$data (only for factor level names)
-
-  suppressMessages(library(data.table))
-  suppressMessages(library(ggplot2))
 
   if(is.null(x.name)) {
     fill.levels <- levels(plot$data[[fill.name]])
@@ -99,8 +99,8 @@ plot_stats <- function(plot,d,labels,position="identity",size=1,y.adj=0) {
   } else {
     x.levels <- levels(plot$data[[x.name]])
     fill.levels <- levels(plot$data[[fill.name]])
-    top.y <- CJ(x=x.levels,fill=fill.levels,sorted=FALSE) |> as.data.table()
-    top.y[,data.table::`:=`(x = factor(x,levels=x.levels),
+    top.y <- data.table::CJ(x=x.levels,fill=fill.levels,sorted=FALSE) |> as.data.table()
+    top.y[,`:=`(x = factor(x,levels=x.levels),
                             fill = factor(fill,levels=fill.levels))]
     setnames(top.y,c("x","fill"),c(x.name,fill.name))
   }
