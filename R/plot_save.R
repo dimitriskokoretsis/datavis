@@ -11,28 +11,25 @@
 #' "in" for inches, "cm" for centimeters and "mm" for millimeters. Defaults to "in".
 #' @param dpi Integer. The resolution of the exported PNG image in dots per inch. Defaults to 600.
 #' @return Exports plot without returning a value.
-
+#'
+#' @import Cairo
+#'
 plot_save <- function(plot,filepath,height,width,unit="in",dpi=600) {
 
   if(unit!="in" & unit!="cm" & unit!="mm") {# Test if proper length unit was given
     stop('Error! Please specify the length unit to be used as "in","cm" or "mm"')
   }
-  suppressMessages(library(ggplot2))
-  suppressMessages(library(measurements))
-  suppressMessages(library(Cairo))
-  suppressMessages(library(stringr))
-
 
   # Save to pdf
-  ggsave(filename=paste0(filepath,"_",width,"x",height,unit,".pdf"),
-         plot=plot,
-         height=height,width=width,units=unit)
+  ggplot2::ggsave(filename=paste0(filepath,"_",width,"x",height,unit,".pdf"),
+                  plot=plot,
+                  height=height,width=width,units=unit)
 
   # Save to png
-  ggsave(filename=paste0(filepath,"_",width,"x",height,unit,".png"),
-         plot=plot,
-         height=height,width=width,units=unit,dpi=dpi,
-         type="cairo")
+  ggplot2::ggsave(filename=paste0(filepath,"_",width,"x",height,unit,".png"),
+                  plot=plot,
+                  height=height,width=width,units=unit,dpi=dpi,
+                  type="cairo")
 
   # Save to svg
   # It is done with the svg graphics device, because ggplots saved with ggsave/svglite cannot be read properly by Affinity Designer

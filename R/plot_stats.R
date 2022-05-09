@@ -17,10 +17,11 @@
 #' @param y.adj Numeric. Adjusts the height of labels above each bar, box or group. Defaults to 0.
 #' Positive sets it higher, negative sets it lower.
 #' @return A plot based on `ggplot2`.
-
+#'
+#' @import data.table
+#' @import ggplot2
+#'
 plot_stats <- function(plot,d,labels,position="identity",size=1,y.adj=0) {
-  suppressMessages(library(ggplot2))
-  suppressMessages(library(data.table))
 
   if(!inherits(layer_scales(plot)$x,"ScaleDiscrete")) {
     stop("Plot's x axis does not have discrete values.")
@@ -61,7 +62,7 @@ plot_stats <- function(plot,d,labels,position="identity",size=1,y.adj=0) {
     }
   }
 
-  suppressWarnings(stats.labels <- .get_top_y(plot,position=position,x.name=x.name,fill.name=fill.name))
+  stats.labels <- .get_top_y(plot,position=position,x.name=x.name,fill.name=fill.name)
 
   stats.labels[d,
                plotted.text:=get(..labels),

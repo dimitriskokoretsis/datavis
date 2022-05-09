@@ -33,7 +33,12 @@
 #' @param pointsize Numeric. Sets the size of the individual data points. Defaults to 1.
 #' @param mean.type Character. Sets from arithmetic to geometric mean and SD. Defaults to "arithmetic".
 #' @return A plot based on `ggplot2`.
-
+#'
+#' #' @import ggplot2
+#' @import ggthemes
+#' @import data.table
+#' @importFrom rlang sym
+#'
 box_mean_plot <- function(d,x=NULL,y,color.group=NULL,x.axis=NULL,y.axis=NULL,legend.title=NULL,
                           x.order=NULL,group.order=NULL,x.first=NULL,group.first=NULL,
                           means=FALSE,boxwidth=0.7,whisker.width=1,mean.size=1,points=TRUE,jitterwidth=1,pointsize=1,
@@ -110,12 +115,6 @@ box_mean_plot <- function(d,x=NULL,y,color.group=NULL,x.axis=NULL,y.axis=NULL,le
   if(!(mean.type %in% c("arithmetic","geometric"))) {
     stop("Supplied mean.type is not 'arithmetic' or 'geometric'.")
   }
-
-  suppressMessages(library(ggplot2))
-  suppressMessages(library(ggthemes))
-  suppressMessages(library(rlang))
-
-
 
   show.outliers <- ifelse(points==TRUE,NA,1)
 

@@ -36,7 +36,12 @@
 #' @param error.upper Character, name of a column in the `d` `data.frame`.
 #' Plot custom upper error bar, calculated by the user and included in the `d` data frame as a column. Defaults to `NULL`, which plots `mean + SD`.
 #' @return A plot based on `ggplot2`.
-
+#'
+#' @import ggplot2
+#' @import ggthemes
+#' @import data.table
+#' @importFrom rlang sym
+#'
 bar_point_plot <- function(d,x=NULL,y,color.group=NULL,x.axis=NULL,y.axis=NULL,legend.title=NULL,
                            x.order=NULL,group.order=NULL,x.first=NULL,group.first=NULL,
                            points=TRUE,barwidth=0.7,jitterwidth=1,pointsize=1,whisker.width=1,
@@ -121,10 +126,6 @@ bar_point_plot <- function(d,x=NULL,y,color.group=NULL,x.axis=NULL,y.axis=NULL,l
       d[[color.group]] <- relevel(d[[color.group]],group.first)
     }
   }
-
-  suppressMessages(library(ggplot2))
-  suppressMessages(library(ggthemes))
-  suppressMessages(library(rlang))
 
   if(mean.type=="arithmetic") {
     mean.function <- function(x) {mean(x,na.rm=TRUE)}
