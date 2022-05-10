@@ -1,7 +1,20 @@
 #' Box plots of grouped data with optional mean value
 #'
+#' @description
 #' Create standard box plots of grouped data (line: median, box: 25 to 75 percentiles, whiskers: 1.5*IQR (interquartile range)).
-#' Can also calculate and show arithmetic or geometric mean. Individual data points are included by default.
+#'
+#' @details
+#' Can include the mean value for each group. To include it, set `means` argument to `TRUE`. To change between arithmetic or geometric
+#' mean, set the `mean.type` argument to "arithmetic" or "geometric".
+#'
+#' The order of groups shown in the x axis and color groups defaults to alphabetical.
+#' To change it, supply `x.order` or `group.order` arguments.
+#' These should be character vectors with the desired order of each factor.
+#' Do not include categories that don't exist in the supplied `data.frame`.
+#' To bring just one category first, supply `x.first` or `group.first` arguments.
+#' If `x.order` is supplied, `x.first` will be ignored. The same holds for `group.order` and `group.first`.
+#'
+#' Adjust other supplied arguments to customize the plot aesthetically.
 #'
 #' @param d `data.frame` with data to be plotted.
 #' @param x Character. The name of the column to be used for the x axis (categorical data).
@@ -36,7 +49,6 @@
 #'
 #' @import ggplot2
 #' @import ggthemes
-#' @import data.table
 #'
 #' @export
 #'

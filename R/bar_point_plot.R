@@ -1,9 +1,22 @@
 #' Bar plots of grouped data with summary statistics
 #'
+#' @description
 #' Create bar plots of grouped data means plus/minus standard deviations (or custom, manually calculated error measure).
-#' The calculations for mean and standard deviation are performed automatically.
-#' Can show geometric mean and standard deviation instead of the corresponding arithmetic parameters if needed.
-#' Individual data points are included by default.
+#'
+#' @details
+#' The calculations for mean and standard deviation are performed automatically. If other error measure is be shown,
+#' it needs to be calculated manually and included as two fields in the supplied `data.frame`
+#' (field names are supplied as `error.lower` and `error.upper` arguments).
+#' To change between arithmetic and geometric mean plus/minus standard deviation, set `mean.type` argument to "arithmetic" or "geometric".
+#'
+#' The order of groups shown in the x axis and color groups defaults to alphabetical.
+#' To change it, supply `x.order` or `group.order` arguments.
+#' These should be character vectors with the desired order of each factor.
+#' Do not include categories that don't exist in the supplied `data.frame`.
+#' To bring just one category first, supply `x.first` or `group.first` arguments.
+#' If `x.order` is supplied, `x.first` will be ignored. The same holds for `group.order` and `group.first`.
+#'
+#' Adjust other supplied arguments to customize the plot aesthetically.
 #'
 #' @param d `data.frame` with data to be plotted.
 #' @param x Character. The name of the column to be used for the x axis (categorical data).
@@ -35,11 +48,11 @@
 #' Plot custom lower error bar, calculated by the user and included in the `d` data frame as a column. Defaults to `NULL`, which plots `mean - SD`.
 #' @param error.upper Character, name of a column in the `d` `data.frame`.
 #' Plot custom upper error bar, calculated by the user and included in the `d` data frame as a column. Defaults to `NULL`, which plots `mean + SD`.
+#'
 #' @return A plot based on `ggplot2`.
 #'
 #' @import ggplot2
 #' @import ggthemes
-#' @import data.table
 #'
 #' @export
 #'

@@ -81,7 +81,19 @@ A plot based on \code{ggplot2}.
 }
 \description{
 Create bar plots of grouped data means plus/minus standard deviations (or custom, manually calculated error measure).
-The calculations for mean and standard deviation are performed automatically.
-Can show geometric mean and standard deviation instead of the corresponding arithmetic parameters if needed.
-Individual data points are included by default.
+}
+\details{
+The calculations for mean and standard deviation are performed automatically. If other error measure is be shown,
+it needs to be calculated manually and included as two fields in the supplied \code{data.frame}
+(field names are supplied as \code{error.lower} and \code{error.upper} arguments).
+To change between arithmetic and geometric mean plus/minus standard deviation, set \code{mean.type} argument to "arithmetic" or "geometric".
+
+The order of groups shown in the x axis and color groups defaults to alphabetical.
+To change it, supply \code{x.order} or \code{group.order} arguments.
+These should be character vectors with the desired order of each factor.
+Do not include categories that don't exist in the supplied \code{data.frame}.
+To bring just one category first, supply \code{x.first} or \code{group.first} arguments.
+If \code{x.order} is supplied, \code{x.first} will be ignored. The same holds for \code{group.order} and \code{group.first}.
+
+Adjust other supplied arguments to customize the plot aesthetically.
 }

@@ -1,6 +1,15 @@
 #' Plot export in multiple formats
 #'
+#' @description
 #' Exports plots based on `ggplot2` in vector (PDF, SVG), raster (PNG) and R data format (Rds).
+#'
+#' @details
+#' PNG and PDF files are exported using the `ggplot2`-based `ggsave` function.
+#' Exported PNG images are anti-aliased using the Cairo graphics library.
+#' Exported SVG graphics are drawn using the R-native SVG graphics device. This is because SVG graphics exported by `ggsave`
+#' are not rendered properly by the graphic design software Affinity Designer.
+#' The downside of exporting SVG with the native graphics device is that the text is drawn as paths instead of text,
+#' so it cannot be easily modified in any graphic design software.
 #'
 #' @param plot Plot to be exported. Needs to have been produced using `ggplot2` (functions described in this guide comply with this).
 #' @param filepath Character. The directory and file name for the exported plot.

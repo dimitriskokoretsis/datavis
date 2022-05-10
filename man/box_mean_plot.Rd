@@ -80,5 +80,17 @@ A plot based on \code{ggplot2}.
 }
 \description{
 Create standard box plots of grouped data (line: median, box: 25 to 75 percentiles, whiskers: 1.5*IQR (interquartile range)).
-Can also calculate and show arithmetic or geometric mean. Individual data points are included by default.
+}
+\details{
+Can include the mean value for each group. To include it, set \code{means} argument to \code{TRUE}. To change between arithmetic or geometric
+mean, set the \code{mean.type} argument to "arithmetic" or "geometric".
+
+The order of groups shown in the x axis and color groups defaults to alphabetical.
+To change it, supply \code{x.order} or \code{group.order} arguments.
+These should be character vectors with the desired order of each factor.
+Do not include categories that don't exist in the supplied \code{data.frame}.
+To bring just one category first, supply \code{x.first} or \code{group.first} arguments.
+If \code{x.order} is supplied, \code{x.first} will be ignored. The same holds for \code{group.order} and \code{group.first}.
+
+Adjust other supplied arguments to customize the plot aesthetically.
 }
