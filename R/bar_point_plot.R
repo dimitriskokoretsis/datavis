@@ -4,10 +4,11 @@
 #' Create bar plots of grouped data means plus/minus standard deviations (or custom, manually calculated error measure).
 #'
 #' @details
-#' The calculations for mean and standard deviation are performed automatically. If other error measure is be shown,
-#' it needs to be calculated manually and included as two fields in the supplied `data.frame`
+#' The calculations for mean and standard deviation are performed automatically. To show other error measure,
+#' calculate it manually and include it as two fields in the supplied `data.frame`
 #' (field names are supplied as `error.lower` and `error.upper` arguments).
-#' To change between arithmetic and geometric mean plus/minus standard deviation, set `mean.type` argument to "arithmetic" or "geometric".
+#' To change between arithmetic and geometric mean plus/minus standard deviation, set `mean.type`
+#' argument to "arithmetic" or "geometric".
 #'
 #' The order of groups shown in the x axis and color groups defaults to alphabetical.
 #' To change it, supply `x.order` or `group.order` arguments.
