@@ -9,16 +9,17 @@
 #' Exported SVG graphics are drawn using the R-native SVG graphics device. This is because SVG graphics exported by `ggsave`
 #' are not rendered properly by the graphic design software Affinity Designer.
 #' The downside of exporting SVG with the native graphics device is that the text is drawn as paths instead of text,
-#' so it cannot be easily modified in any graphic design software.
+#' so it cannot be easily modified as text in graphic design software (e.g. set as bold, italics, etc).
 #'
-#' @param plot Plot to be exported. Needs to have been produced using `ggplot2` (functions described in this guide comply with this).
-#' @param filepath Character. The directory and file name for the exported plot.
-#' Do not add file extension, the appropriate extension will be added to each exported file.
+#' @param plot Plot to be exported. Needs to be based on `ggplot2` (`datavis`-created plots comply with this).
+#' @param filepath Character. The filepath for the exported plot, relative to the working directory.
+#' Do not add file extension, appropriate extension will be added to each exported file.
 #' @param height Numeric. The height of the exported plot in the desired length unit.
 #' @param width Numeric. The width of the exported plot in the desired length unit.
 #' @param unit Character. The unit to be used as `height` and `width`.
 #' "in" for inches, "cm" for centimeters and "mm" for millimeters. Defaults to "in".
 #' @param dpi Integer. The resolution of the exported PNG image in dots per inch. Defaults to 600.
+#'
 #' @return Exports plot without returning a value.
 #'
 #' @import Cairo

@@ -7,10 +7,10 @@
 plot_save(plot, filepath, height, width, unit = "in", dpi = 600)
 }
 \arguments{
-\item{plot}{Plot to be exported. Needs to have been produced using \code{ggplot2} (functions described in this guide comply with this).}
+\item{plot}{Plot to be exported. Needs to be based on \code{ggplot2} (\code{datavis}-created plots comply with this).}
 
-\item{filepath}{Character. The directory and file name for the exported plot.
-Do not add file extension, the appropriate extension will be added to each exported file.}
+\item{filepath}{Character. The filepath for the exported plot, relative to the working directory.
+Do not add file extension, appropriate extension will be added to each exported file.}
 
 \item{height}{Numeric. The height of the exported plot in the desired length unit.}
 
@@ -33,5 +33,5 @@ Exported PNG images are anti-aliased using the Cairo graphics library.
 Exported SVG graphics are drawn using the R-native SVG graphics device. This is because SVG graphics exported by \code{ggsave}
 are not rendered properly by the graphic design software Affinity Designer.
 The downside of exporting SVG with the native graphics device is that the text is drawn as paths instead of text,
-so it cannot be easily modified in any graphic design software.
+so it cannot be easily modified as text in graphic design software (e.g. set as bold, italics, etc).
 }

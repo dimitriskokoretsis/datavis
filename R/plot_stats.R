@@ -1,12 +1,12 @@
-#' Add labels on top of bars or boxes
+#' Add labels on top of plot bars or boxes
 #'
 #' @description
 #' Adds text labels on top of bars or boxes of a `ggplot2`-based plot.
 #' Useful for annotating statistical analysis information.
 #'
 #' @details
-#' `plot_stats` detects the maximum plotted value of each data group (be it bar, box, error bar or individual data point),
-#' and plots labels above it.
+#' `plot_stats` detects the maximum plotted value of each data group (bar, box, error bar or individual data point),
+#' and plots given labels above it.
 #'
 #' The supplied plot needs to be based on `ggplot2` and to have a discrete x scale. The supplied `data.frame` needs to have a
 #' `character` field with the labels to be plotted (whose name is specified in the `labels` argument) and `factor` field(s)

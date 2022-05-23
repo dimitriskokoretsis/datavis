@@ -1,10 +1,10 @@
 #' Box plots of grouped data with optional mean value
 #'
 #' @description
-#' Create standard box plots of grouped data (line: median, box: 25 to 75 percentiles, whiskers: 1.5*IQR (interquartile range)).
+#' Creates a standard box plot of grouped data (line: median, box: 25 to 75 percentiles, whiskers: 1.5*IQR (interquartile range)).
 #'
 #' @details
-#' Can include the mean value for each group. To include it, set `means` argument to `TRUE`. To change between arithmetic or geometric
+#' To include the mean value for each group, set `means` argument to `TRUE`. To change between arithmetic or geometric
 #' mean, set the `mean.type` argument to "arithmetic" or "geometric".
 #'
 #' The order of groups shown in the x axis and color groups defaults to alphabetical.
@@ -18,20 +18,20 @@
 #'
 #' @param d `data.frame` with data to be plotted.
 #' @param x Character. The name of the column to be used for the x axis (categorical data).
-#' Defaults to `NULL`, but then `color.group` needs to be supplied.
+#' If `NULL`, `color.group` needs to be supplied. Defaults to `NULL`.
 #' @param y Character. The name of the column to be used for the y axis (numeric data).
 #' @param color.group Character. The name of the column to be used for color grouping (categorical data).
-#' Defaults to `NULL`, but then `x` needs to be supplied.
-#' @param x.axis Character. The title of the x axis. If `NULL`, x axis title is given the value of `x`.
+#' If `NULL`,`x` needs to be supplied. Defaults to `NULL`.
+#' @param x.axis Character. Sets the title of the x axis. If `NULL`, x axis title is given the value of `x`.
 #' Defaults to `NULL`.
-#' @param y.axis Character. The title of the y axis. If `NULL`, y axis title is given the value of `y`.
+#' @param y.axis Character. Sets the title of the y axis. If `NULL`, y axis title is given the value of `y`.
 #' Defaults to `NULL`.
-#' @param legend.title Character. The title of the legend. If `NULL`, legend title is given the value of `color.group`.
+#' @param legend.title Character. Sets the title of the legend. If `NULL`, legend title is given the value of `color.group`.
 #' Defaults to `NULL`.
 #' @param x.order Character vector of length equal to the number of x categories.
-#' Sets the order of categories in the x axis. Defaults to alphabetical order.
+#' Sets the order of categories in the x axis. If `NULL`, x categories are ordered alphabetically. Defaults to `NULL`.
 #' @param group.order Character vector of length equal to the number of color grouping categories.
-#' Sets the order of color groups. Defaults to alphabetical order.
+#' Sets the order of color groups. If `NULL`, color groups are ordered alphabetically. Defaults to `NULL`.
 #' @param x.first Character. Places a specific x axis category first. Ignored if `x.order` is supplied.
 #' Defaults to `NULL`.
 #' @param group.first Character. Places a specific color group category first.
@@ -41,10 +41,11 @@
 #' @param whisker.width Numeric. Sets the width of the error bar whiskers. Defaults to 1.
 #' @param mean.size Numeric. Sets the size of group mean points. Defaults to 1.
 #' @param points Logical. Sets whether or not to plot individual data points. Defaults to `TRUE`.
-#' Note that, even if set to `FALSE`, outliers will still be shown as individual data points, as is the norm with box plots.
+#' Note that, even if set to `FALSE`, outliers will still be shown as individual data points, as is the norm in box plots.
 #' @param jitterwidth Numeric. The horizontal dispersion of individual data points. Defaults to 1.
-#' @param pointsize Numeric. Sets the size of the individual data points. Defaults to 1.
-#' @param mean.type Character. Sets from arithmetic to geometric mean and SD. Defaults to "arithmetic".
+#' @param pointsize Numeric. Sets the size of individual data points. Defaults to 1.
+#' @param mean.type Character. Sets from arithmetic to geometric mean. Defaults to "arithmetic".
+#'
 #' @return A plot based on `ggplot2`.
 #'
 #' @import ggplot2

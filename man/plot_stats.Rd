@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_stats.R
 \name{plot_stats}
 \alias{plot_stats}
-\title{Add labels on top of bars or boxes}
+\title{Add labels on top of plot bars or boxes}
 \usage{
 plot_stats(plot, d, labels, position = "identity", size = 1, y.adj = 0)
 }
@@ -31,8 +31,8 @@ Adds text labels on top of bars or boxes of a \code{ggplot2}-based plot.
 Useful for annotating statistical analysis information.
 }
 \details{
-\code{plot_stats} detects the maximum plotted value of each data group (be it bar, box, error bar or individual data point),
-and plots labels above it.
+\code{plot_stats} detects the maximum plotted value of each data group (bar, box, error bar or individual data point),
+and plots given labels above it.
 
 The supplied plot needs to be based on \code{ggplot2} and to have a discrete x scale. The supplied \code{data.frame} needs to have a
 \code{character} field with the labels to be plotted (whose name is specified in the \code{labels} argument) and \code{factor} field(s)

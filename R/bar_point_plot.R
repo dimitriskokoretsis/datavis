@@ -1,40 +1,40 @@
 #' Bar plots of grouped data with summary statistics
 #'
 #' @description
-#' Create bar plots of grouped data means plus/minus standard deviations (or custom, manually calculated error measure).
+#' Creates a bar plot of grouped data means plus/minus standard deviations (or custom, manually calculated error measure).
 #'
 #' @details
 #' The calculations for mean and standard deviation are performed automatically. To show other error measure,
 #' calculate it manually and include it as two fields in the supplied `data.frame`
 #' (field names are supplied as `error.lower` and `error.upper` arguments).
-#' To change between arithmetic and geometric mean plus/minus standard deviation, set `mean.type`
-#' argument to "arithmetic" or "geometric".
+#' To change from arithmetic mean plus/minus standard deviation to the corresponding geometric parameters, set `mean.type`
+#' argument from "arithmetic" to "geometric".
 #'
 #' The order of groups shown in the x axis and color groups defaults to alphabetical.
 #' To change it, supply `x.order` or `group.order` arguments.
 #' These should be character vectors with the desired order of each factor.
 #' Do not include categories that don't exist in the supplied `data.frame`.
-#' To bring just one category first, supply `x.first` or `group.first` arguments.
+#' To bring just one category in first place, supply `x.first` or `group.first` arguments.
 #' If `x.order` is supplied, `x.first` will be ignored. The same holds for `group.order` and `group.first`.
 #'
 #' Adjust other supplied arguments to customize the plot aesthetically.
 #'
 #' @param d `data.frame` with data to be plotted.
 #' @param x Character. The name of the column to be used for the x axis (categorical data).
-#' Defaults to `NULL`, but if `NULL`, `color.group` needs to be supplied.
+#' If `NULL`, `color.group` needs to be supplied. Defaults to `NULL`.
 #' @param y Character. The name of the column to be used for the y axis (numeric data).
 #' @param color.group Character. The name of the column to be used for color grouping (categorical data).
-#' Defaults to `NULL`, but if `NULL`, `x` needs to be supplied.
-#' @param x.axis Character. The title of the x axis. If `NULL`, x axis title is given the value of `x`.
+#' If `NULL`,`x` needs to be supplied. Defaults to `NULL`.
+#' @param x.axis Character. Sets the title of the x axis. If `NULL`, x axis title is given the value of `x`.
 #' Defaults to `NULL`.
-#' @param y.axis Character. The title of the y axis. If `NULL`, y axis title is given the value of `y`.
+#' @param y.axis Character. Sets the title of the y axis. If `NULL`, y axis title is given the value of `y`.
 #' Defaults to `NULL`.
-#' @param legend.title Character. The title of the legend. If `NULL`, legend title is given the value of `color.group`.
+#' @param legend.title Character. Sets the title of the legend. If `NULL`, legend title is given the value of `color.group`.
 #' Defaults to `NULL`.
 #' @param x.order Character vector of length equal to the number of x categories.
-#' Determines the order of categories in the x axis, respectively. Defaults to alphabetical order.
+#' Sets the order of categories in the x axis. If `NULL`, x categories are ordered alphabetically. Defaults to `NULL`.
 #' @param group.order Character vector of length equal to the number of color grouping categories.
-#' Determines the order of color groups. Defaults to alphabetical order.
+#' Sets the order of color groups. If `NULL`, color groups are ordered alphabetically. Defaults to `NULL`.
 #' @param x.first Character. Places a specific x axis category first. Ignored if `x.order` is supplied.
 #' Defaults to `NULL`.
 #' @param group.first Character. Places a specific color group category first. Ignored if `group.order` is supplied.
@@ -42,7 +42,7 @@
 #' @param points Logical. Sets whether or not to plot individual data points. Defaults to `TRUE`.
 #' @param barwidth Numeric. Sets the width of the bars. Defaults to 0.7.
 #' @param jitterwidth Numeric. The horizontal dispersion of individual data points. Defaults to 1.
-#' @param pointsize Numeric. Sets the size of the individual data points. Defaults to 1.
+#' @param pointsize Numeric. Sets the size of individual data points. Defaults to 1.
 #' @param whisker.width Numeric. Sets the width of the error bar whiskers. Defaults to 1.
 #' @param mean.type Character, either "arithmetic" or "geometric". Sets which type of mean and standard deviation to plot. Defaults to "arithmetic".
 #' @param error.lower Character, name of a column in the `d` `data.frame`.

@@ -30,27 +30,27 @@ bar_point_plot(
 \item{d}{\code{data.frame} with data to be plotted.}
 
 \item{x}{Character. The name of the column to be used for the x axis (categorical data).
-Defaults to \code{NULL}, but if \code{NULL}, \code{color.group} needs to be supplied.}
+If \code{NULL}, \code{color.group} needs to be supplied. Defaults to \code{NULL}.}
 
 \item{y}{Character. The name of the column to be used for the y axis (numeric data).}
 
 \item{color.group}{Character. The name of the column to be used for color grouping (categorical data).
-Defaults to \code{NULL}, but if \code{NULL}, \code{x} needs to be supplied.}
+If \code{NULL},\code{x} needs to be supplied. Defaults to \code{NULL}.}
 
-\item{x.axis}{Character. The title of the x axis. If \code{NULL}, x axis title is given the value of \code{x}.
+\item{x.axis}{Character. Sets the title of the x axis. If \code{NULL}, x axis title is given the value of \code{x}.
 Defaults to \code{NULL}.}
 
-\item{y.axis}{Character. The title of the y axis. If \code{NULL}, y axis title is given the value of \code{y}.
+\item{y.axis}{Character. Sets the title of the y axis. If \code{NULL}, y axis title is given the value of \code{y}.
 Defaults to \code{NULL}.}
 
-\item{legend.title}{Character. The title of the legend. If \code{NULL}, legend title is given the value of \code{color.group}.
+\item{legend.title}{Character. Sets the title of the legend. If \code{NULL}, legend title is given the value of \code{color.group}.
 Defaults to \code{NULL}.}
 
 \item{x.order}{Character vector of length equal to the number of x categories.
-Determines the order of categories in the x axis, respectively. Defaults to alphabetical order.}
+Sets the order of categories in the x axis. If \code{NULL}, x categories are ordered alphabetically. Defaults to \code{NULL}.}
 
 \item{group.order}{Character vector of length equal to the number of color grouping categories.
-Determines the order of color groups. Defaults to alphabetical order.}
+Sets the order of color groups. If \code{NULL}, color groups are ordered alphabetically. Defaults to \code{NULL}.}
 
 \item{x.first}{Character. Places a specific x axis category first. Ignored if \code{x.order} is supplied.
 Defaults to \code{NULL}.}
@@ -64,7 +64,7 @@ Defaults to \code{NULL}.}
 
 \item{jitterwidth}{Numeric. The horizontal dispersion of individual data points. Defaults to 1.}
 
-\item{pointsize}{Numeric. Sets the size of the individual data points. Defaults to 1.}
+\item{pointsize}{Numeric. Sets the size of individual data points. Defaults to 1.}
 
 \item{whisker.width}{Numeric. Sets the width of the error bar whiskers. Defaults to 1.}
 
@@ -80,20 +80,20 @@ Plot custom upper error bar, calculated by the user and included in the \code{d}
 A plot based on \code{ggplot2}.
 }
 \description{
-Create bar plots of grouped data means plus/minus standard deviations (or custom, manually calculated error measure).
+Creates a bar plot of grouped data means plus/minus standard deviations (or custom, manually calculated error measure).
 }
 \details{
 The calculations for mean and standard deviation are performed automatically. To show other error measure,
 calculate it manually and include it as two fields in the supplied \code{data.frame}
 (field names are supplied as \code{error.lower} and \code{error.upper} arguments).
-To change between arithmetic and geometric mean plus/minus standard deviation, set \code{mean.type}
-argument to "arithmetic" or "geometric".
+To change from arithmetic mean plus/minus standard deviation to the corresponding geometric parameters, set \code{mean.type}
+argument from "arithmetic" to "geometric".
 
 The order of groups shown in the x axis and color groups defaults to alphabetical.
 To change it, supply \code{x.order} or \code{group.order} arguments.
 These should be character vectors with the desired order of each factor.
 Do not include categories that don't exist in the supplied \code{data.frame}.
-To bring just one category first, supply \code{x.first} or \code{group.first} arguments.
+To bring just one category in first place, supply \code{x.first} or \code{group.first} arguments.
 If \code{x.order} is supplied, \code{x.first} will be ignored. The same holds for \code{group.order} and \code{group.first}.
 
 Adjust other supplied arguments to customize the plot aesthetically.

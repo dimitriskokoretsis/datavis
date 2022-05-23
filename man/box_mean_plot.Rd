@@ -30,27 +30,27 @@ box_mean_plot(
 \item{d}{\code{data.frame} with data to be plotted.}
 
 \item{x}{Character. The name of the column to be used for the x axis (categorical data).
-Defaults to \code{NULL}, but then \code{color.group} needs to be supplied.}
+If \code{NULL}, \code{color.group} needs to be supplied. Defaults to \code{NULL}.}
 
 \item{y}{Character. The name of the column to be used for the y axis (numeric data).}
 
 \item{color.group}{Character. The name of the column to be used for color grouping (categorical data).
-Defaults to \code{NULL}, but then \code{x} needs to be supplied.}
+If \code{NULL},\code{x} needs to be supplied. Defaults to \code{NULL}.}
 
-\item{x.axis}{Character. The title of the x axis. If \code{NULL}, x axis title is given the value of \code{x}.
+\item{x.axis}{Character. Sets the title of the x axis. If \code{NULL}, x axis title is given the value of \code{x}.
 Defaults to \code{NULL}.}
 
-\item{y.axis}{Character. The title of the y axis. If \code{NULL}, y axis title is given the value of \code{y}.
+\item{y.axis}{Character. Sets the title of the y axis. If \code{NULL}, y axis title is given the value of \code{y}.
 Defaults to \code{NULL}.}
 
-\item{legend.title}{Character. The title of the legend. If \code{NULL}, legend title is given the value of \code{color.group}.
+\item{legend.title}{Character. Sets the title of the legend. If \code{NULL}, legend title is given the value of \code{color.group}.
 Defaults to \code{NULL}.}
 
 \item{x.order}{Character vector of length equal to the number of x categories.
-Sets the order of categories in the x axis. Defaults to alphabetical order.}
+Sets the order of categories in the x axis. If \code{NULL}, x categories are ordered alphabetically. Defaults to \code{NULL}.}
 
 \item{group.order}{Character vector of length equal to the number of color grouping categories.
-Sets the order of color groups. Defaults to alphabetical order.}
+Sets the order of color groups. If \code{NULL}, color groups are ordered alphabetically. Defaults to \code{NULL}.}
 
 \item{x.first}{Character. Places a specific x axis category first. Ignored if \code{x.order} is supplied.
 Defaults to \code{NULL}.}
@@ -67,22 +67,22 @@ Ignored if \code{group.order} is supplied. Defaults to \code{NULL}.}
 \item{mean.size}{Numeric. Sets the size of group mean points. Defaults to 1.}
 
 \item{points}{Logical. Sets whether or not to plot individual data points. Defaults to \code{TRUE}.
-Note that, even if set to \code{FALSE}, outliers will still be shown as individual data points, as is the norm with box plots.}
+Note that, even if set to \code{FALSE}, outliers will still be shown as individual data points, as is the norm in box plots.}
 
 \item{jitterwidth}{Numeric. The horizontal dispersion of individual data points. Defaults to 1.}
 
-\item{pointsize}{Numeric. Sets the size of the individual data points. Defaults to 1.}
+\item{pointsize}{Numeric. Sets the size of individual data points. Defaults to 1.}
 
-\item{mean.type}{Character. Sets from arithmetic to geometric mean and SD. Defaults to "arithmetic".}
+\item{mean.type}{Character. Sets from arithmetic to geometric mean. Defaults to "arithmetic".}
 }
 \value{
 A plot based on \code{ggplot2}.
 }
 \description{
-Create standard box plots of grouped data (line: median, box: 25 to 75 percentiles, whiskers: 1.5*IQR (interquartile range)).
+Creates a standard box plot of grouped data (line: median, box: 25 to 75 percentiles, whiskers: 1.5*IQR (interquartile range)).
 }
 \details{
-Can include the mean value for each group. To include it, set \code{means} argument to \code{TRUE}. To change between arithmetic or geometric
+To include the mean value for each group, set \code{means} argument to \code{TRUE}. To change between arithmetic or geometric
 mean, set the \code{mean.type} argument to "arithmetic" or "geometric".
 
 The order of groups shown in the x axis and color groups defaults to alphabetical.
