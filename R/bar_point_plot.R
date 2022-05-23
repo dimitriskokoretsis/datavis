@@ -24,7 +24,7 @@
 #' If `NULL`, `color.group` needs to be supplied. Defaults to `NULL`.
 #' @param y Character. The name of the column to be used for the y axis (numeric data).
 #' @param color.group Character. The name of the column to be used for color grouping (categorical data).
-#' If `NULL`,`x` needs to be supplied. Defaults to `NULL`.
+#' If `NULL`, `x` needs to be supplied. Defaults to `NULL`.
 #' @param x.axis Character. Sets the title of the x axis. If `NULL`, x axis title is given the value of `x`.
 #' Defaults to `NULL`.
 #' @param y.axis Character. Sets the title of the y axis. If `NULL`, y axis title is given the value of `y`.

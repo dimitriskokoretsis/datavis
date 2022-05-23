@@ -35,7 +35,7 @@ If \code{NULL}, \code{color.group} needs to be supplied. Defaults to \code{NULL}
 \item{y}{Character. The name of the column to be used for the y axis (numeric data).}
 
 \item{color.group}{Character. The name of the column to be used for color grouping (categorical data).
-If \code{NULL},\code{x} needs to be supplied. Defaults to \code{NULL}.}
+If \code{NULL}, \code{x} needs to be supplied. Defaults to \code{NULL}.}
 
 \item{x.axis}{Character. Sets the title of the x axis. If \code{NULL}, x axis title is given the value of \code{x}.
 Defaults to \code{NULL}.}
