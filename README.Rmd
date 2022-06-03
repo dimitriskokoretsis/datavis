@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# datavis
+# datavis: R package for easy data visualization
 
 <!-- badges: start -->
 
