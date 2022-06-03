@@ -16,6 +16,11 @@ package](https://ggplot2.tidyverse.org/), but specializes in *very*
 specific tasks (only dodged bar and box plots), aiming to increase
 efficiency and accessibility to these tasks.
 
+This is a short summary of datavis’ functionality. For a comprehensive
+guide aimed towards programming beginners, check the handbook [Data
+visualization with the datavis R
+package](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/Data-visualization-with-the-datavis-R-package.pdf).
+
 ## Why datavis
 
 Using the datavis functions, you can easily perform the following tasks
