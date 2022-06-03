@@ -1,0 +1,71 @@
+digraph {
+
+graph [layout = 'dot',
+       outputorder = 'edgesfirst',
+       bgcolor = 'white']
+
+node [fontname = 'Helvetica',
+      fontsize = '20',
+      shape = 'circle',
+      fixedsize = 'true',
+      width = '0.5',
+      style = 'filled',
+      fillcolor = 'aliceblue',
+      color = 'gray70',
+      fontcolor = 'gray50']
+
+edge [fontname = 'Helvetica',
+     fontsize = '8',
+     len = '1.5',
+     color = 'gray80',
+     arrowsize = '0.5']
+
+subgraph cluster1{
+label='Data import'
+  '1' [label = 'Comma-separated value file', fixedsize = 'false', shape = 'rectangle', fillcolor = 'grey90', fontcolor = 'black', fontsize = '10', color = 'black'] 
+  '2' [label = 'data.frame', fixedsize = 'false', shape = 'rectangle', fillcolor = 'grey90', fontcolor = 'black', fontsize = '10', color = 'black'] 
+  '8' [label = 'fread', fixedsize = 'false', shape = 'ellipse', fillcolor = 'lightyellow', fontcolor = 'black', fontsize = '10', color = 'black'] }
+
+subgraph cluster2{
+label='Optional: post-processing'
+  '6' [label = 'Formatted plot', fixedsize = 'false', shape = 'rectangle', fillcolor = 'grey90', fontcolor = 'black', fontsize = '10', color = 'black'] 
+  '11' [label = 'Plot post-processing', fixedsize = 'false', shape = 'ellipse', fillcolor = 'lightyellow', fontcolor = 'black', fontsize = '10', color = 'black'] }
+
+subgraph cluster3{
+label='Optional: statistical
+annotation'
+  '4' [label = 'data.frame with
+statistics information', fixedsize = 'false', shape = 'rectangle', fillcolor = 'grey90', fontcolor = 'black', fontsize = '10', color = 'black'] 
+  '5' [label = 'Plot with statistics
+information', fixedsize = 'false', shape = 'rectangle', fillcolor = 'grey90', fontcolor = 'black', fontsize = '10', color = 'black'] 
+  '10' [label = 'plot_stats', fixedsize = 'false', shape = 'ellipse', fillcolor = 'orange', fontcolor = 'black', fontsize = '10', color = 'black'] 
+  '13' [label = 'Statistical analysis', fixedsize = 'false', shape = 'ellipse', fillcolor = 'lightyellow', fontcolor = 'black', fontsize = '10', color = 'black'] }
+
+subgraph cluster4{
+label='Plot export'
+  '7' [label = 'pdf/svg/png/Rds files', fixedsize = 'false', shape = 'rectangle', fillcolor = 'grey90', fontcolor = 'black', fontsize = '10', color = 'black'] 
+  '12' [label = 'plot_save', fixedsize = 'false', shape = 'ellipse', fillcolor = 'orange', fontcolor = 'black', fontsize = '10', color = 'black'] }
+
+subgraph cluster5{
+label='Visualization'
+  '3' [label = 'Bar/box plot', fixedsize = 'false', shape = 'rectangle', fillcolor = 'grey90', fontcolor = 'black', fontsize = '10', color = 'black'] 
+  '9' [label = 'bar_point_plot /
+box_mean_plot', fixedsize = 'false', shape = 'ellipse', fillcolor = 'orange', fontcolor = 'black', fontsize = '10', color = 'black'] }
+
+'1'->'8' [style = 'solid', color = 'grey50'] 
+'8'->'2' [style = 'solid', color = 'grey50'] 
+'2'->'9' [style = 'solid', color = 'grey50'] 
+'2'->'13' [style = 'solid', color = 'grey50'] 
+'9'->'3' [style = 'solid', color = 'grey50'] 
+'13'->'4' [style = 'solid', color = 'grey50'] 
+'3'->'10' [style = 'solid', color = 'grey50'] 
+'4'->'10' [style = 'solid', color = 'grey50'] 
+'10'->'5' [style = 'solid', color = 'grey50'] 
+'3'->'11' [style = 'dotted', color = 'grey50'] 
+'5'->'11' [style = 'solid', color = 'grey50'] 
+'11'->'6' [style = 'solid', color = 'grey50'] 
+'3'->'12' [style = 'dotted', color = 'grey50'] 
+'5'->'12' [style = 'dotted', color = 'grey50'] 
+'6'->'12' [style = 'solid', color = 'grey50'] 
+'12'->'7' [style = 'solid', color = 'grey50'] 
+}

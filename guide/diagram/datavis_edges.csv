@@ -1,0 +1,17 @@
+from,to,rel
+Comma-separated value file,fread,
+fread,data.frame,
+data.frame,bar_point_plot /\nbox_mean_plot,
+data.frame,Statistical analysis,
+bar_point_plot /\nbox_mean_plot,Bar/box plot,
+Statistical analysis,data.frame with\nstatistics information,
+Bar/box plot,plot_stats,
+data.frame with\nstatistics information,plot_stats,
+plot_stats,Plot with statistics\ninformation,
+Bar/box plot,Plot post-processing,optional
+Plot with statistics\ninformation,Plot post-processing,
+Plot post-processing,Formatted plot,
+Bar/box plot,plot_save,optional
+Plot with statistics\ninformation,plot_save,optional
+Formatted plot,plot_save,
+plot_save,pdf/svg/png/Rds files,

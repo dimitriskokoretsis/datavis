@@ -1,0 +1,14 @@
+label,type,cluster
+Comma-separated value file,object,Data import
+data.frame,object,Data import
+Bar/box plot,object,Visualization
+data.frame with\nstatistics information,object,Optional: statistical\nannotation
+Plot with statistics\ninformation,object,Optional: statistical\nannotation
+Formatted plot,object,Optional: post-processing
+pdf/svg/png/Rds files,object,Plot export
+fread,action,Data import
+bar_point_plot /\nbox_mean_plot,function,Visualization
+plot_stats,function,Optional: statistical\nannotation
+Plot post-processing,action,Optional: post-processing
+plot_save,function,Plot export
+Statistical analysis,action,Optional: statistical\nannotation
