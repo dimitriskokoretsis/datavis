@@ -1,25 +1,25 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# `datavis`
+# datavis
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of `datavis` is to simplify the creation, annotation and export
+The goal of datavis is to simplify the creation, annotation and export
 of bar plots and box plots of publication-grade quality. It is meant for
 academic researchers of any programming experience - newcomers and
 programming experts alike.
 
-To a large extent, `datavis` wraps around the well-known [`ggplot2`
+To a large extent, datavis wraps around the well-known [ggplot2
 package](https://ggplot2.tidyverse.org/), but specializes in *very*
 specific tasks (only dodged bar and box plots), aiming to increase
 efficiency and accessibility to these tasks.
 
-## Why `datavis`
+## Why datavis
 
-Using the `datavis` functions, you can easily perform the following
-tasks with very few lines of code:
+Using the datavis functions, you can easily perform the following tasks
+with very few lines of code:
 
 -   Create bar/box plots with summary statistics, optionally including
     individual data points.
@@ -32,8 +32,7 @@ tasks with very few lines of code:
 
 ## Installation
 
-You can install the development version of `datavis` from
-[GitHub](https://github.com/) with:
+You can install datavis from [GitHub](https://github.com/) with:
 
 ``` r
 install.packages("devtools")
@@ -42,7 +41,7 @@ devtools::install_github("dimitriskokoretsis/datavis")
 
 ## Example
 
-The following example demonstrates the use of all `datavis` functions to
+The following example demonstrates the use of all datavis functions to
 create, annotate and export a bar plot.
 
 ### Data import and plot creation
@@ -71,6 +70,7 @@ plot.1
 ### Import of statistics data and plot annotation
 
 ``` r
+# Import of statistics data from Tukey's honest significant difference (HSD) test
 demo.data.1.TukeyHSD <- data.table::fread("guide/demo_data/demo_data_1_TukeyHSD.csv")
 
 demo.data.1.TukeyHSD
@@ -82,6 +82,7 @@ demo.data.1.TukeyHSD
 ```
 
 ``` r
+# Annotation of original plot
 plot.1.TukeyHSD <- plot.1 |>
   plot_stats(d=demo.data.1.TukeyHSD, # The data.frame containing the labels to be plotted.
              labels="HSDgroups", # The name of the labels column in the supplied data.frame.
@@ -91,7 +92,7 @@ plot.1.TukeyHSD <- plot.1 |>
 plot.1.TukeyHSD
 ```
 
-<img src="man/figures/README-annotate-plot-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
 
 ### Plot export
 
