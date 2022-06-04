@@ -163,7 +163,8 @@ Create a folder for your project and name it as you prefer. This will be the pro
 Substitute the quoted part with the *absolute* or *relative* path to the project folder you just created (see [Directory navigation] section for more information).
 
 ```{r,eval=FALSE}
-# Do not copy and paste this command. Substitute quoted part with the path to your project folder.
+# Do not copy and paste this command.
+# Substitute the quoted part with the path to your project folder.
 setwd("path/to/project/folder")
 ```
 
