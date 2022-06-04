@@ -1,6 +1,7 @@
 ---
 title: "Data visualization with the 'datavis' R package"
-author: "Dimitris Kokoretsis"
+author:
+  - Dimitris Kokoretsis^[dkokoret@gmail.com, https://github.com/dimitriskokoretsis]
 date: "10/05/2022"
 output:
   pdf_document:
@@ -34,7 +35,7 @@ This is a guide to using R and the `datavis` package for programmatic data visua
 
 The guide is meant for relative newcomers to programmatic data visualization, but `datavis` itself is meant for academic researchers of any programming experience - newcomers and programming experts alike.
 
-The full documentation of `datavis` functions is available in PDF format here: [datavis_0.0.1.pdf](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/datavis_0.0.1.pdf)
+`datavis` can be found in the following GitHub repository: <https://github.com/dimitriskokoretsis/datavis>
 
 ## Why to use programming for data analysis and visualization
 
@@ -62,7 +63,7 @@ The main advantages of this approach are:
 
 -   After the initial learning curve, it's less time-consuming and prone to handling errors than click-based procedures
 
-A good elaboration of these arguments, as well as a basic introduction to R can be found in this blog post: [Excel vs R: A Brief Introduction to R](https://www.jessesadler.com/post/excel-vs-r/).
+A good elaboration of these arguments, as well as a basic introduction to R can be found in Jesse Sadler's blog post, 'Excel vs R: A Brief Introduction to R': <https://www.jessesadler.com/post/excel-vs-r/>
 
 Relative newcomers to R may also want to check out the [R language essentials] section at the end of this guide.
 
