@@ -35,7 +35,7 @@ This is a guide to using R and the `datavis` package for programmatic data visua
 
 The guide is meant for relative newcomers to programmatic data visualization, but `datavis` itself is meant for academic researchers of any programming experience - newcomers and programming experts alike.
 
-`datavis` can be found in the following GitHub repository: <https://github.com/dimitriskokoretsis/datavis>
+The source code of the `datavis` package can be found in its GitHub repository: <https://github.com/dimitriskokoretsis/datavis>
 
 ## Why to use programming for data analysis and visualization
 
