@@ -13,8 +13,8 @@ programming experts alike.
 
 To a large extent, datavis wraps around the well-known [ggplot2
 package](https://ggplot2.tidyverse.org/), but specializes in *very*
-specific tasks (only dodged bar and box plots), aiming to increase
-efficiency and accessibility to these tasks.
+specific plots (dodged bar and box plots based on sample distributions),
+aiming to increase efficiency in handling these plots.
 
 This is a short summary of datavis’ functionality. For a comprehensive
 guide aimed towards programming beginners, check the handbook [Data
@@ -31,7 +31,7 @@ with very few lines of code:
 -   Create bar/box plots with summary statistics, optionally including
     individual data points.
 
--   Annotate with custom text above bars/boxes.
+-   Annotate plots with custom text above bars/boxes.
 
 -   Customize plots aesthetically.
 

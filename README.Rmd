@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 
 The goal of datavis is to simplify the creation, annotation and export of bar plots and box plots of publication-grade quality. It is meant for academic researchers of any programming experience - newcomers and programming experts alike.
 
-To a large extent, datavis wraps around the well-known [ggplot2 package](https://ggplot2.tidyverse.org/), but specializes in *very* specific tasks (only dodged bar and box plots), aiming to increase efficiency and accessibility to these tasks.
+To a large extent, datavis wraps around the well-known [ggplot2 package](https://ggplot2.tidyverse.org/), but specializes in *very* specific plots (dodged bar and box plots based on sample distributions), aiming to increase efficiency in handling these plots.
 
 This is a short summary of datavis' functionality. For a comprehensive guide aimed towards programming beginners, check the handbook [Data visualization with the datavis R package](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/Data-visualization-with-the-datavis-R-package.pdf). For a full description of the datavis functions, check their [help documentation](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/datavis_0.0.1.pdf).
 
@@ -31,7 +31,7 @@ Using the datavis functions, you can easily perform the following tasks with ver
 
 -   Create bar/box plots with summary statistics, optionally including individual data points.
 
--   Annotate with custom text above bars/boxes.
+-   Annotate plots with custom text above bars/boxes.
 
 -   Customize plots aesthetically.
 
