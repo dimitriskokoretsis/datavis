@@ -23,7 +23,7 @@ The goal of datavis is to simplify the creation, annotation and export of bar pl
 
 To a large extent, datavis wraps around the well-known [ggplot2 package](https://ggplot2.tidyverse.org/), but specializes in *very* specific tasks (only dodged bar and box plots), aiming to increase efficiency and accessibility to these tasks.
 
-This is a short summary of datavis' functionality. For a comprehensive guide aimed towards programming beginners, check the handbook [Data visualization with the datavis R package](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/Data-visualization-with-the-datavis-R-package.pdf).
+This is a short summary of datavis' functionality. For a comprehensive guide aimed towards programming beginners, check the handbook [Data visualization with the datavis R package](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/Data-visualization-with-the-datavis-R-package.pdf). For the datavis functions' full description, check their [help documentation](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/datavis_0.0.1.pdf).
 
 ## Why datavis
 

@@ -20,6 +20,8 @@ This is a short summary of datavis’ functionality. For a comprehensive
 guide aimed towards programming beginners, check the handbook [Data
 visualization with the datavis R
 package](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/Data-visualization-with-the-datavis-R-package.pdf).
+For the datavis functions’ full description, check their [help
+documentation](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/datavis_0.0.1.pdf).
 
 ## Why datavis
 
