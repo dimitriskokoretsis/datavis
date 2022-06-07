@@ -6,29 +6,29 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of datavis is to simplify the creation, annotation and export
+The goal of `datavis` is to simplify the creation, annotation and export
 of bar plots and box plots of publication-grade quality. It is meant for
 academic researchers of any programming experience - newcomers and
 programming experts alike.
 
-To a large extent, datavis wraps around the well-known [ggplot2
+To a large extent, `datavis` wraps around the well-known [`ggplot2`
 package](https://ggplot2.tidyverse.org/), but specializes in *very*
 specific plots (dodged bar and box plots based on sample distributions),
 aiming to increase efficiency in handling these plots.
 
-This is a short summary of datavis’ functionality. For a comprehensive
+This is a short summary of `datavis`’ functionality. For a comprehensive
 guide aimed towards programming beginners, check the handbook [Data
-visualization with the datavis R
+visualization with the ‘datavis’ R
 package](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/Data-visualization-with-the-datavis-R-package.pdf).
-For a full description of the datavis functions, check their help
+For a full description of the `datavis` functions, check their help
 documentation in [pdf
 form](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/datavis_0.0.1.pdf)
 or by browsing the package after installation.
 
 ## Why to use datavis
 
-Using the datavis functions, you can easily perform the following tasks
-with very few lines of code:
+Using the `datavis` functions, you can easily perform the following
+tasks with very few lines of code:
 
 -   Create bar/box plots with summary statistics:
 
@@ -46,8 +46,8 @@ with very few lines of code:
 
 ## Installation
 
-You can install datavis from [GitHub](https://github.com/) by executing
-the following lines in the R console:
+You can install `datavis` from [GitHub](https://github.com/) by
+executing the following lines in the R console:
 
 ``` r
 install.packages("devtools")
@@ -56,7 +56,7 @@ devtools::install_github("dimitriskokoretsis/datavis")
 
 ## Example
 
-The following example demonstrates the use of datavis functions to
+The following example demonstrates the use of `datavis` functions to
 create, annotate and export a bar plot.
 
 ### Data import and plot creation
