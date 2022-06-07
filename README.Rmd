@@ -102,7 +102,7 @@ plot.1.TukeyHSD
 ### Plot export
 
 ```{r}
-# Export of plot in PDF, SVG and PNG formats with the plot_save function of datavis
+# Export of plot in PDF, SVG, PNG and Rds formats with the plot_save function of datavis
 # See function's help documentation for more information
 plot.1.TukeyHSD |>
   plot_save(filepath="guide/demo_plots/plot_1_TukeyHSD", # Path to export files
