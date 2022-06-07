@@ -44,7 +44,8 @@ with very few lines of code:
 
 ## Installation
 
-You can install datavis from [GitHub](https://github.com/) with:
+You can install datavis from [GitHub](https://github.com/) by executing
+the following lines in the R console:
 
 ``` r
 install.packages("devtools")
