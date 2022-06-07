@@ -20,8 +20,10 @@ This is a short summary of datavis’ functionality. For a comprehensive
 guide aimed towards programming beginners, check the handbook [Data
 visualization with the datavis R
 package](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/Data-visualization-with-the-datavis-R-package.pdf).
-For a full description of the datavis functions, check their [help
-documentation](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/datavis_0.0.1.pdf).
+For a full description of the datavis functions, check their help
+documentation in [pdf
+form](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/datavis_0.0.1.pdf)
+or by browsing the package after installation.
 
 ## Why to use datavis
 
@@ -36,9 +38,9 @@ with very few lines of code:
 
     -   optionally, individual data points
 
--   Annotate plots with custom text above bars/boxes.
-
 -   Customize plots aesthetically.
+
+-   Annotate plots with custom text above bars/boxes.
 
 -   Export plots in various formats for any purpose.
 
@@ -54,7 +56,7 @@ devtools::install_github("dimitriskokoretsis/datavis")
 
 ## Example
 
-The following example demonstrates the use of all datavis functions to
+The following example demonstrates the use of datavis functions to
 create, annotate and export a bar plot.
 
 ### Data import and plot creation
@@ -63,9 +65,11 @@ create, annotate and export a bar plot.
 # Data import using the fread function of the data.table package
 demo.data.1 <- data.table::fread("guide/demo_data/demo_data_1.csv")
 
-# Plot creation
+# Loading of datavis package
 library(datavis)
 
+# Creation of bar plot with the bar_point_plot function of datavis
+# See function's help documentation for more information
 plot.1 <- demo.data.1 |>
   bar_point_plot(x="factor.1", # X axis grouping based on "factor.1" field
                  y="value", # Y axis value is "value" field
@@ -95,12 +99,12 @@ demo.data.1.TukeyHSD
 ```
 
 ``` r
-# Annotation of original plot
+# Annotation of original plot with the plot_stats function of datavis
+# See function's help documentation for more information
 plot.1.TukeyHSD <- plot.1 |>
   plot_stats(d=demo.data.1.TukeyHSD, # The data.frame containing the labels to be plotted.
              labels="HSDgroups", # The name of the labels column in the supplied data.frame.
              position="dodge") # Positioning of labels in the X dimension.
-                               # See function's documentation for details.
 
 plot.1.TukeyHSD
 ```
@@ -110,8 +114,10 @@ plot.1.TukeyHSD
 ### Plot export
 
 ``` r
+# Export of plot in PDF, SVG and PNG formats with the plot_save function of datavis
+# See function's help documentation for more information
 plot.1.TukeyHSD |>
   plot_save(filepath="guide/demo_plots/plot_1_TukeyHSD", # Path to export files
-            height=4,width=5)
+            height=4,width=5) # Dimensions in inches
 #> Plot "plot_1_TukeyHSD" saved as pdf, png, svg and Rds in /guide/demo_plots
 ```
