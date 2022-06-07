@@ -55,13 +55,13 @@ The main advantages of this approach are:
 
 -   You can keep track of all data processing and analysis steps easily and make sense of them at any point in the future.
 
--   You can easily modify the data processing and analysis by modifying the code
+-   You can easily modify the data processing and analysis by modifying the code.
 
--   You can share the code so other others know exactly how the data was processed
+-   You can share the code so other others know exactly how the data was processed.
 
--   The primary data is never changed, only read
+-   The primary data is never changed, only read.
 
--   After the initial learning curve, it's less time-consuming and prone to handling errors than click-based procedures
+-   After the initial learning curve, it's less time-consuming and prone to handling errors than click-based procedures.
 
 A good elaboration of these arguments, as well as a basic introduction to R can be found in Jesse Sadler's blog post, 'Excel vs R: A Brief Introduction to R': <https://www.jessesadler.com/post/excel-vs-r/>
 
