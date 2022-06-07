@@ -28,7 +28,8 @@ documentation](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/da
 Using the datavis functions, you can easily perform the following tasks
 with very few lines of code:
 
--   Create bar/box plots with summary statistics, optionally including
+-   Create bar/box plots with summary statistics (arithmetic or
+    geometric mean plus/minus standard deviation), optionally including
     individual data points.
 
 -   Annotate plots with custom text above bars/boxes.
