@@ -34,8 +34,8 @@ tasks with very few lines of code:
 
     -   arithmetic or geometric mean
 
-    -   plus/minus corresponding standard deviation, or custom error
-        measure calculated by the user
+    -   plus/minus corresponding standard deviation, or custom,
+        user-calculated error measure
 
     -   optionally, individual data points
 

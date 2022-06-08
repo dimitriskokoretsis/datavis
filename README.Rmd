@@ -33,7 +33,7 @@ Using the `datavis` functions, you can easily perform the following tasks with v
 
     -   arithmetic or geometric mean
 
-    -   plus/minus corresponding standard deviation, or custom error measure calculated by the user
+    -   plus/minus corresponding standard deviation, or custom, user-calculated error measure
 
     -   optionally, individual data points
 
