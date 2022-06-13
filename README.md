@@ -22,7 +22,7 @@ visualization with the ‘datavis’ R
 package](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/Data-visualization-with-the-datavis-R-package.pdf).
 For a full description of the `datavis` functions, check their help
 documentation in [pdf
-form](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/datavis_0.0.1.pdf)
+form](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/datavis_0.1.0.pdf)
 or by browsing the package after installation.
 
 ## Why to use datavis
