@@ -219,7 +219,7 @@ bar_point_plot <- function(d,x=NULL,y,color.group=NULL,x.axis=NULL,y.axis=NULL,l
                                position=bar.position,
                                colour="black",width=whisker.width*barwidth*0.2)
   } else {
-    error.data <- geom_errorbar(mapping=aes(ymin=!!sym(error.lower),ymax=!!sym(error.upper)),
+    error.data <- geom_errorbar(mapping=aes(ymin=!!rlang::sym(error.lower),ymax=!!rlang::sym(error.upper)),
                                 position=bar.position,
                                 colour="black",width=whisker.width*barwidth*0.2)
   }
