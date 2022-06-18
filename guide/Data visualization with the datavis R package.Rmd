@@ -77,7 +77,7 @@ Download and install the latest version of R in your system through this website
 
 ## RStudio installation and workspace
 
-R comes with its own integrated development environment (IDE), but it is quite limiting. **RStudio** is the most popular IDE for R. It is free and offers many advantages over the default R IDE. Download and install the desktop version it through this website: <https://www.rstudio.com/>.
+R comes with its own integrated development environment (IDE), but it is quite limiting. **RStudio** is the most popular IDE for R. It is free and offers many advantages over the default R IDE. Download and install the desktop version through this website: <https://www.rstudio.com/>.
 
 The RStudio workspace consists of 4 main parts or panes (figure 1):
 
