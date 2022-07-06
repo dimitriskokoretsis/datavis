@@ -1,7 +1,9 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# datavis: R package for easy data visualization
+# datavis
+
+## R package for easy data visualization
 
 <!-- badges: start -->
 <!-- badges: end -->
