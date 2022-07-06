@@ -61,7 +61,7 @@ The following example demonstrates the use of `datavis` functions to create, ann
 ```{r}
 # Data import using the fread function of the data.table package
 demo.data.1 <- data.table::fread("guide/demo_data/demo_data_1.csv")
-demo.data.1
+knitr::kable(demo.data.1)
 ```
 
 ```{r}
@@ -87,7 +87,7 @@ plot.1
 ```{r}
 # Import of statistics data from Tukey's honest significant difference (HSD) test
 demo.data.1.TukeyHSD <- data.table::fread("guide/demo_data/demo_data_1_TukeyHSD.csv")
-demo.data.1.TukeyHSD
+knitr::kable(demo.data.1.TukeyHSD)
 ```
 
 ```{r}

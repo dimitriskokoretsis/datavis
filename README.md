@@ -65,29 +65,31 @@ create, annotate and export a bar plot.
 ``` r
 # Data import using the fread function of the data.table package
 demo.data.1 <- data.table::fread("guide/demo_data/demo_data_1.csv")
-demo.data.1
-#>     factor.1 factor.2 value
-#>  1:        A        C  9.00
-#>  2:        A        C 10.26
-#>  3:        A        C  9.84
-#>  4:        A        C 11.77
-#>  5:        A        C 10.23
-#>  6:        A        D 20.64
-#>  7:        A        D 18.84
-#>  8:        A        D 21.43
-#>  9:        A        D 18.35
-#> 10:        A        D 19.28
-#> 11:        B        C 15.18
-#> 12:        B        C 15.19
-#> 13:        B        C 14.60
-#> 14:        B        C 16.48
-#> 15:        B        C 15.25
-#> 16:        B        D 11.94
-#> 17:        B        D 11.22
-#> 18:        B        D 13.02
-#> 19:        B        D 10.17
-#> 20:        B        D 16.62
+knitr::kable(demo.data.1)
 ```
+
+| factor.1 | factor.2 | value |
+|:---------|:---------|------:|
+| A        | C        |  9.00 |
+| A        | C        | 10.26 |
+| A        | C        |  9.84 |
+| A        | C        | 11.77 |
+| A        | C        | 10.23 |
+| A        | D        | 20.64 |
+| A        | D        | 18.84 |
+| A        | D        | 21.43 |
+| A        | D        | 18.35 |
+| A        | D        | 19.28 |
+| B        | C        | 15.18 |
+| B        | C        | 15.19 |
+| B        | C        | 14.60 |
+| B        | C        | 16.48 |
+| B        | C        | 15.25 |
+| B        | D        | 11.94 |
+| B        | D        | 11.22 |
+| B        | D        | 13.02 |
+| B        | D        | 10.17 |
+| B        | D        | 16.62 |
 
 ``` r
 # Loading of datavis package
@@ -114,13 +116,15 @@ plot.1
 ``` r
 # Import of statistics data from Tukey's honest significant difference (HSD) test
 demo.data.1.TukeyHSD <- data.table::fread("guide/demo_data/demo_data_1_TukeyHSD.csv")
-demo.data.1.TukeyHSD
-#>    HSDgroups factor.1 factor.2
-#> 1:         a        A        D
-#> 2:         b        B        C
-#> 3:        bc        B        D
-#> 4:         c        A        C
+knitr::kable(demo.data.1.TukeyHSD)
 ```
+
+| HSDgroups | factor.1 | factor.2 |
+|:----------|:---------|:---------|
+| a         | A        | D        |
+| b         | B        | C        |
+| bc        | B        | D        |
+| c         | A        | C        |
 
 ``` r
 # Annotation of original plot with the plot_stats function of datavis
