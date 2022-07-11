@@ -173,7 +173,7 @@ It is considered good practice to have an internal structure in each project fol
 
 To follow this guide interactively, use the mock data used throughout this guide to demonstrate the use of the `datavis` functions.
 
-Download the following zip file with mock data and extract its contents in the project's working directory: [demo_data.zip](<https://github.com/dimitriskokoretsis/datavis/raw/master/demo_data.zip>). This should create a subfolder named "demo_data" with 2 CSV files.
+Download the following zip file with mock data and extract its contents in the project's working directory: [demo_data.zip](<https://github.com/dimitriskokoretsis/datavis/raw/master/guide/demo_data.zip>). This should create a subfolder named "demo_data" with 2 CSV files.
 
 Next, create a subfolder for the resulting visualizations -named "demo_plots"- by running the following line in the console pane.
 
