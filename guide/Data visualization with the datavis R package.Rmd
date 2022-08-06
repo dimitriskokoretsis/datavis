@@ -632,13 +632,27 @@ The name of a variable is meant to signify what it represents. You can establish
 
 ### Vectors
 
-In R, a vector is a group of elements of the same type, arranged in a specific order. We can create a vector in R as follows:
+In R, a vector is a group of elements of the same type, arranged in a specific order. We can create a vector in R as below:
 
 ```{r}
 d <- c(2,7,3,6,4)
 ```
 
-`c()` is a special function that creates a vector with the elements inside the brackets. So this piece of code creates a variable named `d` and assigns to it the values (2,7,3,6,4) in this specific order.
+`c()` is a special function that creates a vector with the elements inside the brackets. So this piece of code creates a variable named `d` and assigns to it the values (2,7,3,6,4) in this specific order. To call a specific element within `d`, refer to its position in square brackets (`[]`), as below:
+
+```{r}
+# Show the 2nd element of d
+d[2]
+```
+
+An element within the vector can be similarly changed as below:
+
+```{r}
+# Change the value of the 2nd element of d to 3
+d[2] <- 3
+d
+```
+
 
 Several R built-in functions use vectors as input. For example, to find the sum of all elements in vector `d`:
 
@@ -657,11 +671,16 @@ Vectors are a generalization of single values. This means that even single value
 
 ### Data frames
 
-A data frame is a table structure with values organized in rows (*records*) and columns (*fields*). It is the type of data that most resembles a spreadsheet. Each column has values of the same type (for example, `numeric`). Because of this, each column can be conveniently used in calculations as a vector.
+A data frame is a table structure with values organized in rows (*records*) and columns (*fields*). It is the type of data that most resembles a spreadsheet. Each column has values of the same type (for example, `numeric`). Because of this, each column can be conveniently used in calculations as a vector. Extract specific columns in a data frame by referring to their name after a dollar sign (`$`), as below:
 
-R has a built-in type of data structure called `data.frame`. The functions described in this guide are based on an R package called [`data.table`](https://rdatatable.gitlab.io/data.table/), which offers a more convenient syntax than base R. This means that the `data.table` package needs to be installed in your system, but the functions can also accept standard R `data.frame`s as input.
+```{r}
+# Show the field "value" of demo.data.1, as a vector
+demo.data.1$value
+```
 
-The `fread` function of the `data.table` package can read any text file of table form into a data frame.
+R has a built-in type of data structure called `data.frame`. The functions described in this guide are based on the [`data.table`](https://rdatatable.gitlab.io/data.table/) R package, which offers a more convenient syntax than base R. This means that the `data.table` package needs to be installed in your system - which is done automatically during the `datavis` package installation. Moreover, the `datavis` functions accept both `data.table`s and base-R `data.frame`s as input.
+
+The `fread` function of the `data.table` package can read any text file of tabular form into a `data.table`.
 
 ## Functions
 
