@@ -3,6 +3,15 @@
 
 # datavis
 
+*This is a short summary of `datavis`’ functionality. For a
+comprehensive guide aimed towards programming beginners, check the
+handbook [Data visualization with the ‘datavis’ R
+package](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/Data-visualization-with-the-datavis-R-package.pdf).
+For a full description of the `datavis` functions, check their help
+documentation in [pdf
+form](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/datavis_0.1.0.pdf)
+or by browsing the package after installation.*
+
 ## R package for easy data visualization
 
 <!-- badges: start -->
@@ -17,15 +26,6 @@ To a large extent, `datavis` wraps around the well-known [`ggplot2`
 package](https://ggplot2.tidyverse.org/), but specializes in *very*
 specific plots (dodged bar and box plots based on sample distributions),
 aiming to increase efficiency in handling these plots.
-
-This is a short summary of `datavis`’ functionality. For a comprehensive
-guide aimed towards programming beginners, check the handbook [Data
-visualization with the ‘datavis’ R
-package](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/Data-visualization-with-the-datavis-R-package.pdf).
-For a full description of the `datavis` functions, check their help
-documentation in [pdf
-form](https://github.com/dimitriskokoretsis/datavis/raw/master/guide/datavis_0.1.0.pdf)
-or by browsing the package after installation.
 
 ## Why to use datavis
 
@@ -149,5 +149,6 @@ plot.1.TukeyHSD
 plot.1.TukeyHSD |>
   plot_save(filepath="guide/demo_plots/plot_1_TukeyHSD", # Path to export files
             height=4,width=5) # Dimensions in inches
+#> Warning: Using ragg device as default. Ignoring `type` and `antialias` arguments
 #> Plot "plot_1_TukeyHSD" saved as pdf, png, svg and Rds in /guide/demo_plots
 ```
