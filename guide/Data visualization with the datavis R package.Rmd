@@ -763,7 +763,7 @@ However, the nested function call is not easy to understand at first glance. The
 
 If a function has more than one input arguments, the pipe automatically assigns its left side value as the **1st input argument**.
 
-As of R version 4.2.0 (April 2022), the `|>` pipe is more flexible: it can assign the left side to any input argument of `function.2` with the `_` placeholder. The following piece of code uses `h` as the 2nd argument of `function.1` and the output of `function.1` as the 2nd input argument of `function.2`.
+As of R version 4.2.0 (April 2022), the `|>` pipe is more flexible: it can assign its left side to any input argument of its right-side function with the `_` placeholder. The following piece of code uses `h` as the 2nd argument of `function.1` and the output of `function.1` as the 2nd input argument of `function.2`.
 
 ```{r,eval=FALSE}
 h |>
